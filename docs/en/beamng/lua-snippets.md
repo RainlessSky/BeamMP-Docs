@@ -262,16 +262,16 @@ introPopupCareer is an easy to use, but open ended popup that supports embedding
 Flavours control which buttons are displayed and the default image aspect ratio. Four flavours exist:
 
 * `default`
-  * Default image aspect ratio: 16x9
-  * Buttons: Later, Okay
+    * Default image aspect ratio: 16x9
+    * Buttons: Later, Okay
 * `welcome`
-  * Default image aspect ratio: 16x9
-  * Buttons: Career Logbook, Okay
+    * Default image aspect ratio: 16x9
+    * Buttons: Career Logbook, Okay
 * `branch-info`
-  * Default image aspect ratio: 16x9
-  * Buttons: Career Logbook, Okay
+    * Default image aspect ratio: 16x9
+    * Buttons: Career Logbook, Okay
 * `garage`
-  * Buttons: Later, Okay
+    * Buttons: Later, Okay
 
 ```lua
 guihooks.trigger("introPopupCareer", {
@@ -347,4 +347,35 @@ If multiple pages are provided, or the hook is triggered multiple times, then th
 
 ### Dialogue
 
-todo
+Dialogue is used in the *A Rocky Start* campaign to display information about a mission. It is a centered, vertically aligned popup with a specific layout. It does not support embedding HTML.
+
+```lua
+ui_missionInfo.openDialogue({
+    title    = "Dialogue title",
+    type     = "Custom", -- isn't actually displayed
+    typeName = "typeName",
+    data     = {
+        {label = "objective",  value = "reward"}
+        -- add more...
+    },
+    buttons  = {
+        {action = "accept", text = "Accept",  cmd = ""},
+        {action = 'decline',text = "Decline", cmd = ""}
+        -- add more...
+    }
+})
+
+ui_missionInfo.closeDialogue()
+```
+
+<figure class="image image_resized" style="width:75%" markdown>
+  ![The Dialogue snippet displayed in BeamNG.drive](../../assets/content/Dialogue.png)
+</figure>
+
+Only one Dialogue can be displayed at once. Any existing Dialogue is overridden.
+
+!!! info
+
+    `#!lua ui_missionInfo.closeDialogue()` must be used to close a dialogue.
+
+    Make sure you call this function when any button is pressed.
