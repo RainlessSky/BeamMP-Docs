@@ -15,14 +15,8 @@ The BeamMP support team does not offer support for issues with pirated / outdate
 
 ### **2a. Windows Installation**
 
-::: note
-As of April 1st, 2026, the MSI installer is an "unrecognized app" according to Windows Defender SmartScreen.
-
-To bypass this warning, click 'More info', then click 'Run anyway'.
-:::
-
 1. Go to [beammp.com](https://beammp.com/) and click the 'Download Now' button.
-2. Run the `BeamMP_Installer.msi` installer and follow the instructions.
+2. Run the `BeamMP_Installer.exe` installer and follow the instructions.
 3. The BeamMP Launcher icon should appear on your desktop. If not, just search for “BeamMP” in the Windows search bar.
 
 ::: note
@@ -42,25 +36,20 @@ Make sure you have basic development tools installed, often found in packages, f
 - openSUSE: `zypper in -t pattern devel-basis`
 - SteamOS (Arch): `sudo pacman -S base-devel linux-api-headers glibc libconfig` (You also need to do `sudo steamos-readonly disable` but make sure to enable it again after installing the packages)
 
-
 Clone `vcpkg`, bootstrap it and add it to PATH
 
-1. 
 ```bash
 git clone https://github.com/microsoft/vcpkg.git
 ```
 
-2. 
 ```bash
 ./vcpkg/bootstrap-vcpkg.sh
 ```
 
-3. 
 ```bash
 export VCPKG_ROOT="$(pwd)/vcpkg"
 export PATH=$VCPKG_ROOT:$PATH
 ```
-
 
 Clone the BeamMP-Launcher Repository to your system using `git`, for example:
 `git clone https://github.com/BeamMP/BeamMP-Launcher.git`
@@ -72,25 +61,23 @@ Checkout the tag that was used for the [latest release](https://github.com/BeamM
 
 In the root directory of the project,
 
-1. 
 ```cmake
 cmake . -B bin -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-linux
 ```
 
-2. 
 ```cmake
 cmake --build bin --parallel
 ```
 
-::: note
+::: tip RAM usage
 Should you run out of RAM while building, you can ommit the --parallel instruction, it will then use less RAM due to building only on one CPU thread.
 :::
 
-:::note ""
-By not specifying `-DCMAKE_BUILD_TYPE=Release` you are building a debug version, which is larger in filesize but does not contain the launcher-can-only-connect-to-a-server-once bug
+::: note
+By not specifying `-DCMAKE_BUILD_TYPE=Release` you are building a debug version, which is larger in filesize but does not contain the launcher-can-only-connect-to-a-server-once bug (verify if this still exists?)
 :::
 
-:::note Fedora Users
+::: info Fedora Users
 If vcpkg fails during OpenSSL compilation with kernel headers errors, ensure all dependencies are installed:
 ```bash
 sudo dnf install kernel-headers kernel-devel gcc gcc-c++ make perl

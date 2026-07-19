@@ -1,16 +1,17 @@
 # How to create exclusions in the Windows Defender Firewall and Antivirus?
 
-::: info
-    
+:::: info
     Before tampering with the firewall, make sure that your network within the windows networking settings is set to private (assuming you are in a private network).
 
-    ::: danger ":material-scale-balance: DISCLAIMER:"
+::: danger ":material-scale-balance: DISCLAIMER:"
 
         **Firewall / Defender exclsuions are a risk**.
 
         By creating exclsuions, you understand the risks of allowing programs on your PC and opening up ports on your home network to the public and therefore void the right to hold BeamMP accountable for **any and all** damages that may happen to you or your household.
 
         We take no responsibility for any content on any externally linked services or websites.
+:::
+::::
 
 ## 1. Defender Firewall exclusion for the BeamMP-Launcher.
 

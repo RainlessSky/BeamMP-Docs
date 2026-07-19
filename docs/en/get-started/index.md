@@ -1,5 +1,7 @@
 # Getting Started
 
+This is a duplicate of install-beammp.md
+
 ## **1. Compatibility**
 
 BeamMP is fully compatible with Windows and Linux, compatibility with MacOS is being worked on.
@@ -15,14 +17,8 @@ The BeamMP support team does not offer support for issues with pirated / outdate
 
 ### **2a. Windows Installation**
 
-::: note
-As of April 1st, 2026, the MSI installer is an "unrecognized app" according to Windows Defender SmartScreen.
-
-To bypass this warning, click 'More info', then click 'Run anyway'.
-:::
-
 1. Go to [beammp.com](https://beammp.com/) and click the 'Download Now' button.
-2. Run the `BeamMP_Installer.msi` installer and follow the instructions.
+2. Run the `BeamMP_Installer.exe` installer and follow the instructions.
 3. The BeamMP Launcher icon should appear on your desktop. If not, just search for “BeamMP” in the Windows search bar.
 
 ::: note

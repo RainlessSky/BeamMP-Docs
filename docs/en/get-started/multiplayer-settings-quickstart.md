@@ -1,5 +1,7 @@
 # Mutliplayer Settings
 
+This is a duplicate of multiplayer-settings.md
+
 ## **1. General**
 
 ??? setting "Show advanced options"

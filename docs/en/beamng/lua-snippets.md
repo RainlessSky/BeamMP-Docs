@@ -205,11 +205,11 @@ HTML is supported and can be used to add images/icons, for example.
 
 Multiple can be displayed at once, displayed sequentially.
 
-::: bug
+::: warning
 
     Providing no buttons prevents the player from escaping the dialog without using the console.
 
-::: bug
+::: warning
 
     The SDF parts of the Minimap UI app remain visible while a ConfirmationDialog is active.
 
@@ -293,7 +293,7 @@ guihooks.trigger("introPopupClose")
 
 If multiple pages are provided, or the hook is triggered multiple times, then the pages are combined into the same popup. If the hook is triggered while a introPopup is active, or when a different introPopup type has already been triggered, then it is displayed in a separate popup after the existing popup is closed.
 
-::: bug
+::: warning
 
     The background blur has a minimum height, causing popups with short content to have excess blur below its window. Two main workarounds exist:
 
@@ -338,7 +338,7 @@ guihooks.trigger("introPopupClose")
 
 If multiple pages are provided, or the hook is triggered multiple times, then the pages are combined into the same popup. If the hook is triggered while a introPopup is active, or when a different introPopup type has already been triggered, then it is displayed in a separate popup after the existing popup is closed.
 
-::: bug
+::: warning
 
     The background blur has a minimum height, causing popups with short content to have excess blur below its window. Two main workarounds exist:
 

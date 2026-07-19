@@ -1,11 +1,3 @@
-::: warning "This site is under construction!"
-
-    This site is being actively worked on. 
-    
-    Feel you could help? Please do by clicking on the page with a pencil on the right!
-
-    This can be done any page too.
-
 # Mod/In-Game Scripting Reference
 
 BeamMP allows you to create your own client side plugins as well. We have provided a few functions that you can use to communicate with other multiplayer mods, and other players through the server.

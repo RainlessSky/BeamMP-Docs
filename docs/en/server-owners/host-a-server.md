@@ -24,12 +24,12 @@ The setup consists of the following steps, you should follow all of them.
 
 ### **1. Port forwarding**
 
-::: info
+:::: info
 
     If you are on a VPS (Virtual Private Server), Rootserver, or plan on hosting this server locally (with players in the same house as you), you can skip this step.
     This step is necessary if you want someone **outside** of your household to join your home-hosted server (outside of your local network).
 
-    ::: danger ":material-scale-balance: DISCLAIMER:"
+::: danger ":material-scale-balance: DISCLAIMER:"
 
         **Port forwarding is a risk**.
 
@@ -40,6 +40,8 @@ The setup consists of the following steps, you should follow all of them.
     It is therefore recommended to host a server with one of our partnered services!
 
     *Please see [this guide on how to port forward](port-forwarding.md)*
+::: 
+::::
 
 #### Partnered Hosting Services (paid):
 
@@ -58,7 +60,6 @@ The setup consists of the following steps, you should follow all of them.
 * [Wabbanode](https://wabbanode.com/partner/beammp)
 * [Iceline Hosting](https://iceline-hosting.com/games/beammp)
 
-
 #### 1.1 Firewall
 
 Depending on your setup, you may need to let BeamMP-Server through your firewall. This is the case on Windows (turning the firewall off usually does **not** work), and on a lot of preinstalled Linux servers. 
@@ -75,8 +76,8 @@ You have a limited number of keys. One key can be used on one server at a time, 
 More keys can be obtained by supporting the project. Read [this article](https://docs.beammp.com/support/player-faq/) for more information.
 
 ::: warning
-
     DO NOT EVER SHARE THIS KEY OR SHOW IT TO ANYONE. TREAT THIS LIKE A PASSWORD.
+:::
 
 You will need a [Discord](https://discord.com) account for this step. This is necessary to prevent spam.
 
@@ -218,9 +219,9 @@ Now run your server again, and see if it spits out any more `[ERROR]` or `[WARN]
 Vehicle mods and map mods are different to install, but both require you to put them in your server's (`Resources/Client`) folder. Simply slide any mod you want to add in that folder.
 
 ::: warning
-
     Should you receive a "done" or "start" message when trying to join your server after adding mods, you likely added an incompatible or broken mod to your server.
     Mod incompatibilities can also occur between 2 or more mods. If you have client mods installed, check [this guide](../../FAQ/How-to-deactivate-mods.md) about removing mods from your game.
+:::
 
 #### 5.2 General Mods
 
@@ -282,14 +283,14 @@ Enter the servers public IPv4 and Port below, then click "CheckBeamMP".
   <input type="submit" value="CheckBeamMP">
 </form>
 
-::: warning "I want to use a VPN such as RadminVPN, Hamachi, or similar."
-    
+:::: warning "I want to use a VPN such as RadminVPN, Hamachi, or similar."
     BeamMP does not support these VPNs, as they often cause issues. One of these issues is UDP traffic not being forwarded. To resolve this, refer to section 1.
-    
-    ::: question "But why has it worked in the past?"
 
+::: note "But why has it worked in the past?"
         This is due to the developers of these applications updating their software and implementing changes which BeamMP has no control over.
         It is up to the developers of these applications to provide support for specific use cases like a BeamMP-Server.
+:::
+::::
 
 ## Still facing issues?
 
